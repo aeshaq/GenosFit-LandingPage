@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-    site: 'genosfit.com',
-    base: '/',
+  site: "https://genosfit.com",
+  base: "/"
 });
