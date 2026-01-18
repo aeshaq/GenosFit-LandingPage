@@ -1,2 +1,3 @@
-# GenosFit-LandingPage
-Landing Page for the GenosFit app
+# GenosFit Landing Page
+
+Astro landing page with a Supabase-backed waitlist
