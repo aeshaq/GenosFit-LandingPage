@@ -53,11 +53,12 @@ img {
 .logo {
   font-weight: 700;
   letter-spacing: 0.02em;
+  font-size: 1.5rem;
 }
 
 .nav a {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .hero {
@@ -232,6 +233,9 @@ img {
 .step {
   border-left: 2px solid var(--accent);
   padding-left: 1rem;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
 }
 
 .testimonial {

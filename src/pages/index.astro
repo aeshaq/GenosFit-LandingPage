@@ -4,7 +4,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 ---
-<BaseLayout title="GenosFit | Train by your biology" description="GenosFit builds adaptive training plans based on your biology, recovery, and goals.">
+<BaseLayout
+  title="GenosFit | Build gym community"
+  description="GenosFit helps gyms build member community with tracked workouts, friendly competition, and retention tools."
+>
   <header class="container nav">
     <div class="logo">GenosFit</div>
     <nav>
@@ -28,11 +31,12 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
         <div class="cta-group">
           <a class="button primary" href="#waitlist">Join the waitlist</a>
         </div>
-      <div class="badge-row">
-        <span class="pill">Gym-first product</span>
-        <span class="pill">Member feed</span>
-        <span class="pill">Live leaderboards</span>
-      </div>
+        <div class="badge-row">
+          <span class="pill">Gym-first product</span>
+          <span class="pill">Member feed</span>
+          <span class="pill">Live leaderboards</span>
+          <span class="pill">Community-driven retention</span>
+        </div>
     </div>
     <div class="card stagger">
       <h3>Community drives retention</h3>
@@ -120,7 +124,7 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
         <div class="research-card">
           <p class="highlight">
             Boutique club members reported stronger social support and intrinsic motivation than fitness-only or
-            multipurpose members.
+            multipurpose members, which led to higher retention rates.
           </p>
           <p class="source">
             Source:
@@ -142,6 +146,18 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
               rel="noreferrer"
             >
               What Makes Individuals Stick to Their Exercise Regime? (2021)
+            </a>
+          </p>
+        </div>
+        <div class="research-card">
+          <p class="highlight">
+            Competition can increase attention and effort in physical tasks, suggesting leaderboards can boost focus
+            when used carefully.
+          </p>
+          <p class="source">
+            Source:
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4554955/" target="_blank" rel="noreferrer">
+              Competition, effort, and attention study (2015)
             </a>
           </p>
         </div>
@@ -203,7 +219,7 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
           <input type="hidden" name="utm_campaign" />
           <input type="hidden" name="utm_source" />
           <input type="hidden" name="utm_medium" />
-          <button class="button primary" type="submit">Get early access</button>
+          <button class="button primary" type="submit">Join the waitlist</button>
         </form>
         <div id="waitlist-status" aria-live="polite"></div>
       </div>
@@ -287,7 +303,7 @@ const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
           const responseText = await res.text();
           if (!res.ok && res.status !== 409) throw new Error(responseText || "insert_failed");
-          statusEl.textContent = "You're on the list. Welcome to GenosFit.";
+          statusEl.textContent = "You're on the list! We will update you soon.";
           form.reset();
         } catch (err) {
           statusEl.textContent = "Something went wrong. Try again in a moment.";
